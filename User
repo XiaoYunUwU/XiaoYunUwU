@@ -1,4 +1,5 @@
 return {
+["CN_BLPO"] = true,
 ["ZMZ4517"] = true,
 ["CN_718"] = true,
 ["China0_718"] = true,
