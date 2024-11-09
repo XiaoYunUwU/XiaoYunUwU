@@ -1,4 +1,5 @@
 return {
+["wezega"] = true,
 ["Fish212327"] = true,
 ["chuanchuanbu"] = true,
 ["hsudjxc"] = true,
