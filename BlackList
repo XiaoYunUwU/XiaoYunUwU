@@ -3,13 +3,13 @@ return {
     ["f1a71d33d2769406"] = "故意刷屏反馈",
     ["Hwid_Example0"] = "其他原因",
     ["Hwid_Example1"] = "其他原因",
-    ["Hwid_Example2"] = "其他原因"
-    ["Hwid_Example3"] = "其他原因"
-    ["Hwid_Example4"] = "其他原因"
-    ["Hwid_Example5"] = "其他原因"
-    ["Hwid_Example6"] = "其他原因"
-    ["Hwid_Example7"] = "其他原因"
-    ["Hwid_Example8"] = "其他原因"
-    ["Hwid_Example9"] = "其他原因"
+    ["Hwid_Example2"] = "其他原因",
+    ["Hwid_Example3"] = "其他原因",
+    ["Hwid_Example4"] = "其他原因",
+    ["Hwid_Example5"] = "其他原因",
+    ["Hwid_Example6"] = "其他原因",
+    ["Hwid_Example7"] = "其他原因",
+    ["Hwid_Example8"] = "其他原因",
+    ["Hwid_Example9"] = "其他原因",
     ["Hwid_Example10"] = "其他原因"
 }
