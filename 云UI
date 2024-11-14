@@ -628,7 +628,7 @@ end
         end
         animate()
     end
-    coroutine.wrap(NPLHKB_fake_script)()
+    --coroutine.wrap(NPLHKB_fake_script)()
 
     SBG.Color = ColorSequence.new {ColorSequenceKeypoint.new(0.00, zyColor), ColorSequenceKeypoint.new(1.00, zyColor)}
     SBG.Rotation = 90
