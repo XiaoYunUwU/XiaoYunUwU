@@ -3,7 +3,7 @@ return { --云脚本 白名单
 ["用户名"] = true,
 ["用户名"] = true,
 ["用户名"] = true,
-["用户名"] = true,
+["Eternitvwhisper"] = true,
 ["ksshcz"] = true,
 ["pzf123123"] = true,
 ["baihu1452"] = true,
