@@ -464,7 +464,7 @@ AutoCastSettings:AddSlider('AutoCastDelay', {
 AutoCastSettings:AddDropdown('AutoCastMode', {
     Text = '自动抛竿模式',
     Tooltip = '选择自动抛竿的模式',
-    Values = {'真实', '狂暴'},
+    Values = {'Legit', 'Rage'},
     Default = autoCastMode,
 
     Callback = function(Value)
