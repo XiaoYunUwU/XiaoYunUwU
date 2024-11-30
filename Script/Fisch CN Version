@@ -1,3 +1,4 @@
+--请勿倒卖鱼脚本，想圈钱的话 操你妈😡"
 local repo = 'https://raw.githubusercontent.com/KINGHUB01/Gui/main/'
 
 local Library = loadstring(game:HttpGet(repo ..'Gui%20Lib%20%5BLibrary%5D'))()
