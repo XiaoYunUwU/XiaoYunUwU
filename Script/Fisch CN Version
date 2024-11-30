@@ -5,7 +5,7 @@ local ThemeManager = loadstring(game:HttpGet(repo ..'Gui%20Lib%20%5BThemeManager
 local SaveManager = loadstring(game:HttpGet(repo ..'Gui%20Lib%20%5BSaveManager%5D'))()
 
 local Window = Library:CreateWindow({
-    Title = 'Fisch',
+    Title = 'Fisch V1.2.3 (BETA)',
     Center = true,
     AutoShow = true,
     TabPadding = 8,
@@ -25,7 +25,7 @@ local WatermarkConnection = game:GetService('RunService').RenderStepped:Connect(
         FrameCounter = 0;
     end;
 
-    Library:SetWatermark(('Rinns Hub | %s fps | %s ms'):format(
+    Library:SetWatermark(('Rinns Hub V1.2.3 | %s fps | %s ms'):format(
         math.floor(FPS),
         math.floor(game:GetService('Stats').Network.ServerStatsItem['Data Ping']:GetValue())
     ));
@@ -34,10 +34,10 @@ end);
 -- Tabs
 
 local Tabs = {
-    Main = Window:AddTab('Main'),
-    Teleports = Window:AddTab('Teleports'),
-    LocalPlayer = Window:AddTab('LocalPlayer'),
-    Settings = Window:AddTab('Settings')
+    Main = Window:AddTab('主要'),
+    Teleports = Window:AddTab('传送'),
+    LocalPlayer = Window:AddTab('本地玩家'),
+    Settings = Window:AddTab('设置')
 }
 
 -- Tables
@@ -307,15 +307,15 @@ end)
 local AutoShakeGroup = Tabs.Main:AddLeftGroupbox('自动摇动')
 local AutoReelGroup = Tabs.Main:AddLeftGroupbox('自动收线')
 local AutoCastGroup = Tabs.Main:AddLeftGroupbox('自动抛竿')
-local FishUtilitiesGroup = Tabs.Main:AddRightGroupbox('钓鱼 (🐟) 工具')
---local EventGroup = Tabs.Main:AddRightGroupbox('事件')
+local FishUtilitiesGroup = Tabs.Main:AddRightGroupbox('钓鱼（🐟）工具')
+--local EventGroup = Tabs.Main:AddRightGroupbox('活动')
 local ZoneCastGroup = Tabs.Main:AddRightGroupbox('区域抛竿')
-local CollarPlayerGroup = Tabs.Main:AddRightGroupbox('玩家跟踪')
+local CollarPlayerGroup = Tabs.Main:AddRightGroupbox('追踪玩家')
 
 AutoShakeGroup:AddToggle('AutoShake', {
     Text = '启用',
     Default = false,
-    Tooltip = '自动点击摇动按钮',
+    Tooltip = '自动帮你点击摇动按钮',
     Callback = function(Value)
         autoShake = Value
     end
@@ -326,7 +326,7 @@ local AutoShakeSettings = AutoShakeGroup:AddDependencyBox()
 AutoShakeSettings:AddDropdown('AutoShakeMode', {
     Text = '自动摇动方式',
     Tooltip = '选择点击摇动按钮的方法',
-    Values = {'点击事件', --[['信号触发',]] '按键事件' },
+    Values = {'事件点击', --[['信号触发',]] '按键事件'},
     Default = autoShakeMethod,
 
     Callback = function(Value)
@@ -337,7 +337,7 @@ AutoShakeSettings:AddDropdown('AutoShakeMode', {
 local AutoShakeKeyCodeEventText = AutoShakeSettings:AddDependencyBox()
 
 AutoShakeKeyCodeEventText:AddLabel('灵感来自 rblxscripts.net！')
-AutoShakeKeyCodeEventText:AddLabel('感谢他们的支持。')
+AutoShakeKeyCodeEventText:AddLabel('特别感谢他们。')
 
 AutoShakeKeyCodeEventText:SetupDependencies({
     { Options.AutoShakeMode, "按键事件" }
@@ -363,7 +363,7 @@ AutoShakeSettings:SetupDependencies({
 local AutoShakeXYOffset = AutoShakeGroup:AddDependencyBox()
 
 AutoShakeXYOffset:AddSlider('AutoShakeXOffset', {
-    Text = '自动摇动 X 偏移',
+    Text = 'AutoShake X Offset',
     Default = 0,
     Min = -10,
     Max = 10,
@@ -375,7 +375,7 @@ AutoShakeXYOffset:AddSlider('AutoShakeXOffset', {
 })
 
 AutoShakeXYOffset:AddSlider('AutoShakeXOffset', {
-    Text = '自动摇动 Y 偏移',
+    Text = 'AutoShake Y Offset',
     Default = 0,
     Min = -10,
     Max = 10,
@@ -387,14 +387,14 @@ AutoShakeXYOffset:AddSlider('AutoShakeXOffset', {
 })
 
 AutoShakeXYOffset:SetupDependencies({
-    { Options.AutoShakeMode, "点击事件" }
+    { Options.AutoShakeMode, "ClickEvent" }
 })
 ]]
 
 AutoReelGroup:AddToggle('AutoReel', {
     Text = '启用',
     Default = false,
-    Tooltip = '自动收线延迟',
+    Tooltip = '自动收回钓竿',
     Callback = function(Value)
         autoReel = Value
     end
@@ -414,7 +414,6 @@ AutoReelSettings:AddSlider('AutoReelDelay', {
     end
 })
 
-
 AutoReelSettings:SetupDependencies({
     { Toggles.AutoReel, true }
 })
@@ -428,7 +427,7 @@ AutoCastGroup:AddToggle('AutoCast', {
         local Tool = LocalCharacter:FindFirstChildOfClass("Tool")
         if Tool ~= nil and Tool:FindFirstChild("events"):WaitForChild("cast") ~= nil and Value == true then
             task.wait(autoCastDelay)
-            if autoCastMode == "真实模式" then
+            if autoCastMode == "Legit" then
                 VirtualInputManager:SendMouseButtonEvent(0, 0, 0, true, LocalPlayer, 0)
                 HumanoidRootPart.ChildAdded:Connect(function()
                     if HumanoidRootPart:FindFirstChild("power") ~= nil and HumanoidRootPart.power.powerbar.bar ~= nil then
@@ -441,7 +440,7 @@ AutoCastGroup:AddToggle('AutoCast', {
                         end)
                     end
                 end)
-            elseif autoCastMode == "暴力模式" then
+            elseif autoCastMode == "Rage" then
                 Tool.events.cast:FireServer(100)
             end
         end
@@ -464,8 +463,8 @@ AutoCastSettings:AddSlider('AutoCastDelay', {
 
 AutoCastSettings:AddDropdown('AutoCastMode', {
     Text = '自动抛竿模式',
-    Tooltip = '切换自动抛竿的模式',
-    Values = {'真实模式', '暴力模式'},
+    Tooltip = '选择自动抛竿的模式',
+    Values = {'真实', '狂暴'},
     Default = autoCastMode,
 
     Callback = function(Value)
@@ -478,31 +477,31 @@ AutoCastSettings:SetupDependencies({
 })
 
 local SellButton = FishUtilitiesGroup:AddButton({
-    Text = '卖掉一条鱼',
+    Text = '出售一条鱼',
     Func = function()
         Workspace:WaitForChild("world"):WaitForChild("npcs"):WaitForChild("Marc Merchant"):WaitForChild("merchant"):WaitForChild("sell"):InvokeServer()
     end,
     DoubleClick = false,
-    Tooltip = '卖掉你当前拿着的鱼'
+    Tooltip = '出售你手中的鱼'
 })
 
 
 local SellAllButton = FishUtilitiesGroup:AddButton({
-    Text = '卖掉所有鱼',
+    Text = '出售所有鱼',
     Func = function()
         Workspace:WaitForChild("world"):WaitForChild("npcs"):WaitForChild("Marc Merchant"):WaitForChild("merchant"):WaitForChild("sellall"):InvokeServer()
     end,
     DoubleClick = false,
-    Tooltip = '卖掉你所有的鱼'
+    Tooltip = '出售你所有的鱼'
 })
---[[
-local AppraiseFishButton = FishUtilitiesGroup:AddButton({
-    Text = '估价鱼 🐟 (450C$)',
+
+local AppraiseButton = FishUtilitiesGroup:AddButton({
+    Text = '评估鱼 🐟 (450C$)',
     Func = function()
         Workspace:WaitForChild("world"):WaitForChild("npcs"):WaitForChild("Appraiser"):WaitForChild("appraiser"):WaitForChild("appraise"):InvokeServer()
     end,
     DoubleClick = false,
-    Tooltip = '估价你当前拿着的鱼'
+    Tooltip = '评估你手中的鱼'
 })
 
 
@@ -546,7 +545,7 @@ EventGroup:AddLabel("Might be buggy!")
 ZoneCastGroup:AddToggle('ZoneCast', {
     Text = '启用',
     Default = false,
-    Tooltip = '将鱼竿抛到其他区域',
+    Tooltip = '将钓竿抛到另一个区域',
     Callback = function(Value)
         ZoneCast = Value
     end
@@ -572,7 +571,7 @@ ZoneCastDropdowns:SetupDependencies({
 CollarPlayerGroup:AddToggle('CollarPlayer', {
     Text = '启用',
     Default = false,
-    Tooltip = "给玩家戴项圈，让他们看起来像你的宠物 :3",
+    Tooltip = "将玩家戴上项圈，使他们看起来像你的宠物 :3",
     Callback = function(Value)
         CollarPlayer = Value
     end
@@ -581,9 +580,9 @@ CollarPlayerGroup:AddToggle('CollarPlayer', {
 local CollarPlayerDropdown = CollarPlayerGroup:AddDependencyBox()
 
 CollarPlayerDropdown:AddDropdown('CollarTarget', {
-    SpecialType = 'Player',
+    SpecialType = '玩家',
     Text = '玩家',
-    Tooltip = '选择你想戴项圈的玩家',
+    Tooltip = '选择你要为其戴上项圈的玩家',
 
     Callback = function(Value)
         Target = Value
@@ -594,13 +593,13 @@ CollarPlayerDropdown:SetupDependencies({
     { Toggles.CollarPlayer, true }
 })
 
--- Teleports
+-- 传送
 
-local TeleportsGroup = Tabs.Teleports:AddLeftGroupbox('传送功能')
+local TeleportsGroup = Tabs.Teleports:AddLeftGroupbox('传送')
 
 TeleportsGroup:AddDropdown('PlaceTeleport', {
-    Text = '地点传送',
-    Tooltip = '传送到指定地点',
+    Text = '传送到地点',
+    Tooltip = '传送到一个地点',
     Values = teleportSpots,
     Default = '',
 
@@ -613,7 +612,7 @@ TeleportsGroup:AddDropdown('PlaceTeleport', {
 
 TeleportsGroup:AddDropdown('NPCTeleport', {
     Text = '传送到NPC',
-    Tooltip = '传送到一个NPC',
+    Tooltip = '传送到一个钓竿',
     Values = racistPeople,
     Default = '',
 
@@ -624,10 +623,9 @@ TeleportsGroup:AddDropdown('NPCTeleport', {
     end
 })
 
-
 TeleportsGroup:AddDropdown('ItemTeleport', {
     Text = '传送到物品',
-    Tooltip = '传送到一个物品',
+    Tooltip = '传送到一个钓竿',
     Values = {"Bait_Crate", "Carbon_Rod", "Crab_Cage", "Fast_Rod", "Flimsy_Rod", "GPS", "Long_Rod", "Lucky_Rod", "Plastic_Rod", "Training_Rod"},
     Default = '',
 
@@ -654,7 +652,7 @@ local TeleportToSafeZoneButton = TeleportToSafeZoneGroup:AddButton({
 local LocalPlayerGroup = Tabs.LocalPlayer:AddLeftGroupbox('本地玩家')
 
 LocalPlayerGroup:AddToggle('Noclip', {
-    Text = '穿墙模式',
+    Text = '穿墙',
     Default = false,
     Tooltip = '允许你穿过墙壁',
     Callback = function(Value)
@@ -665,6 +663,7 @@ LocalPlayerGroup:AddToggle('Noclip', {
 LocalPlayerGroup:AddToggle('AntiDrown', {
     Text = '禁用氧气',
     Default = false,
+    Tooltip = '允许你在水中无限时间停留',
     Callback = function(Value)
         AntiDrown = Value
         if Value == true then
@@ -683,10 +682,11 @@ LocalPlayerGroup:AddToggle('AntiDrown', {
         end
     end
 })
+
 local ResetRodGroup = Tabs.LocalPlayer:AddRightGroupbox('重置')
 
 local ResetRodButton = ResetRodGroup:AddButton({
-    Text = '重置鱼竿',
+    Text = '重置钓竿',
     Func = function()
         local tool = LocalCharacter:FindFirstChildOfClass("Tool")
 
@@ -695,22 +695,23 @@ local ResetRodButton = ResetRodGroup:AddButton({
         end
     end,
     DoubleClick = false,
-    Tooltip = '重置你的鱼竿'
+    Tooltip = '重置你的钓竿'
 })
 
-local AntiAfkGroup = Tabs.LocalPlayer:AddRightGroupbox('防挂机')
+
+local AntiAfkGroup = Tabs.LocalPlayer:AddRightGroupbox('防AFK')
 
 local AntiAFKButton = AntiAfkGroup:AddButton({
-    Text = '防挂机',
+    Text = '防AFK',
     Func = function()
-        Library:Notify("防挂机功能已启动！")
+        Library:Notify("防AFK已启动！")
         LocalPlayer.Idled:Connect(function()
             VirtualUser:CaptureController()
             VirtualUser:ClickButton2(Vector2.new())
         end)
     end,
     DoubleClick = false,
-    Tooltip = '防止长时间挂机被踢出'
+    Tooltip = '禁用空闲踢出'
 })
 
 local FreezeCharacterGroup = Tabs.LocalPlayer:AddLeftGroupbox('冻结角色')
@@ -718,7 +719,7 @@ local FreezeCharacterGroup = Tabs.LocalPlayer:AddLeftGroupbox('冻结角色')
 FreezeCharacterGroup:AddToggle('FreezeCharacter', {
     Text = '启用',
     Default = false,
-    Tooltip = "将角色冻结在当前位置",
+    Tooltip = "冻结你的角色在当前位置",
     Callback = function(Value)
         local oldpos = HumanoidRootPart.CFrame
         FreezeChar = Value
@@ -734,18 +735,36 @@ FreezeCharacterGroup:AddToggle('FreezeCharacter', {
     end
 })
 
-
--- Settings
+-- 设置
 
 local SettingsGroup = Tabs.Settings:AddLeftGroupbox('设置')
-local CreditsGroup = Tabs.Settings:AddRightGroupbox('致谢')
+local CreditsGroup = Tabs.Settings:AddRightGroupbox('鸣谢')
 
-CreditsGroup:AddLabel('由Kylosilly和Netpa制作！')
-CreditsGroup:AddLabel('用爱与恨制作而成 :3')
+CreditsGroup:AddLabel('由 kylosilly 和 netpa 制作！')
+CreditsGroup:AddLabel('充满爱与恨制作 :3')
 
-CreditsGroup:AddLabel(' البرود يا جماعه هو الحل') -- 原文未翻译，保留阿拉伯语内容
+local DiscordButton = CreditsGroup:AddButton({
+    Text = '复制 Fisch Discord 链接',
+    Func = function()
+        setclipboard('https://discord.gg/DEkfE99JFh')
+    end,
+    DoubleClick = false,
+    Tooltip = '加入我们的 Fisch Discord！'
+})
 
-SettingsGroup:AddButton('卸载', function() Library:Unload() end)
+local DiscordButton2 = CreditsGroup:AddButton({
+    Text = '复制主 Discord 链接',
+    Func = function()
+        setclipboard('https://discord.gg/VudXCDCaBN')
+    end,
+    DoubleClick = false,
+    Tooltip = '加入我们的主 Discord！'
+})
+
+CreditsGroup:AddLabel('البرود يا جماعه هو الحل')
+
+SettingsGroup:AddButton('卸载ui', function() Library:Unload() end)
+
 
 Library:OnUnload(function()
         Library.Unloaded = true
@@ -813,10 +832,9 @@ task.spawn(function()
         return HttpService:JSONDecode(version)
     end)
 
-    if success then
-        if Version ~= LatestVer then
-            Library:Notify("您使用的是过时版本的Fisch脚本。")
-            Library:Notify("加入我们的fisch discord服务器获取新的脚本。")
-        end
+if success then
+    if Version ~= LatestVer then
+        Library:Notify("您正在使用过时版本的 Fisch 脚本。")
+        Library:Notify("加入我们的 Fisch Discord 服务器以获取最新脚本。")
     end
-end)
+end
