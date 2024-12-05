@@ -512,7 +512,7 @@ EventGroup:AddDropdown('Event', {
     Tooltip = 'Grabs the Event Item',
     Values = {'Gaint Mushroom', 'Spiders Eye', 'Strange Root', 'Candy Corn', 'Dark Art Skull'},
     Default = '',
-  
+
     Callback = function(Value)
         if HumanoidRootPart ~= nil and ActiveFolder ~= nil then
             local oldpos = HumanoidRootPart.CFrame
@@ -827,15 +827,4 @@ SaveManager:LoadAutoloadConfig()
 
 local Version = "1.2.3"
 
-task.spawn(function()
-    local success, LatestVer = pcall(function()
-        local version = game:HttpGet("https://raw.githubusercontent.com/kylosilly/femboyware/refs/heads/main/fischver")
-        return HttpService:JSONDecode(version)
-    end)
 
-if success then
-    if Version ~= LatestVer then
-        Library:Notify("您正在使用过时版本的 Fisch 脚本。")
-        Library:Notify("加入我们的 Fisch Discord 服务器以获取最新脚本。")
-    end
-end
