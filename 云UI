@@ -298,7 +298,7 @@ end
       ScriptTitle.BackgroundTransparency = 1.000
       ScriptTitle.Position = UDim2.new(0, 0, 0.00953488424, 0)
       ScriptTitle.Size = UDim2.new(0, 102, 0, 20)
-      ScriptTitle.Font = Enum.Font.GothamSemibold
+      ScriptTitle.Font = Enum.Font.GothamBold
       ScriptTitle.Text = name
       ScriptTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
       ScriptTitle.TextSize = 5.000
@@ -412,7 +412,7 @@ end
         TabText.BackgroundTransparency = 1.000
         TabText.Position = UDim2.new(1.41666663, 0, 0, 0)
         TabText.Size = UDim2.new(0, 76, 0, 24)
-        TabText.Font = Enum.Font.GothamSemibold
+        TabText.Font = Enum.Font.GothamBold
         TabText.Text = name
         TabText.TextColor3 = Color3.fromRGB(255, 255, 255)
         TabText.TextSize = 14.000
@@ -478,7 +478,7 @@ end
       SectionText.BackgroundTransparency = 1.000
       SectionText.Position = UDim2.new(0.0887396261, 0, 0, 0)
       SectionText.Size = UDim2.new(0, 401, 0, 36)
-      SectionText.Font = Enum.Font.GothamSemibold
+      SectionText.Font = Enum.Font.GothamBold
       SectionText.Text = name
       SectionText.TextColor3 = Color3.fromRGB(255, 255, 255)
       SectionText.TextSize = 16.000
@@ -575,7 +575,7 @@ end
             Btn.BorderSizePixel = 0
             Btn.Size = UDim2.new(0, 428, 0, 38)
             Btn.AutoButtonColor = false
-            Btn.Font = Enum.Font.GothamSemibold
+            Btn.Font = Enum.Font.GothamBold
             Btn.Text = "   " .. text
             Btn.TextColor3 = Color3.fromRGB(255, 255, 255)
             Btn.TextSize = 16.000
@@ -650,7 +650,7 @@ end
             ToggleBtn.BorderSizePixel = 0
             ToggleBtn.Size = UDim2.new(0, 428, 0, 38)
             ToggleBtn.AutoButtonColor = false
-            ToggleBtn.Font = Enum.Font.GothamSemibold
+            ToggleBtn.Font = Enum.Font.GothamBold
             ToggleBtn.Text = "   " .. text
             ToggleBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
             ToggleBtn.TextSize = 16.000
@@ -756,7 +756,7 @@ end
             KeybindBtn.BorderSizePixel = 0
             KeybindBtn.Size = UDim2.new(0, 428, 0, 38)
             KeybindBtn.AutoButtonColor = false
-            KeybindBtn.Font = Enum.Font.GothamSemibold
+            KeybindBtn.Font = Enum.Font.GothamBold
             KeybindBtn.Text = "   " .. text
             KeybindBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
             KeybindBtn.TextSize = 16.000
@@ -853,7 +853,7 @@ end
             TextboxBack.BorderSizePixel = 0
             TextboxBack.Size = UDim2.new(0, 428, 0, 38)
             TextboxBack.AutoButtonColor = false
-            TextboxBack.Font = Enum.Font.GothamSemibold
+            TextboxBack.Font = Enum.Font.GothamBold
             TextboxBack.Text = "   " .. text
             TextboxBack.TextColor3 = Color3.fromRGB(255, 255, 255)
             TextboxBack.TextSize = 16.000
@@ -953,7 +953,7 @@ end
             SliderBack.BorderSizePixel = 0
             SliderBack.Size = UDim2.new(0, 428, 0, 38)
             SliderBack.AutoButtonColor = false
-            SliderBack.Font = Enum.Font.GothamSemibold
+            SliderBack.Font = Enum.Font.GothamBold
             SliderBack.Text = "   " .. text
             SliderBack.TextColor3 = Color3.fromRGB(255, 255, 255)
             SliderBack.TextSize = 16.000
@@ -1177,7 +1177,7 @@ end
             DropdownTop.BorderSizePixel = 0
             DropdownTop.Size = UDim2.new(0, 428, 0, 38)
             DropdownTop.AutoButtonColor = false
-            DropdownTop.Font = Enum.Font.GothamSemibold
+            DropdownTop.Font = Enum.Font.GothamBold
             DropdownTop.Text = ""
             DropdownTop.TextColor3 = Color3.fromRGB(255, 255, 255)
             DropdownTop.TextSize = 16.000
@@ -1208,7 +1208,7 @@ end
             DropdownText.BorderSizePixel = 0
             DropdownText.Position = UDim2.new(0.0373831764, 0, 0, 0)
             DropdownText.Size = UDim2.new(0, 184, 0, 38)
-            DropdownText.Font = Enum.Font.GothamSemibold
+            DropdownText.Font = Enum.Font.GothamBold
             DropdownText.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
             DropdownText.PlaceholderText = text
             DropdownText.Text = ""
