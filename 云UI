@@ -298,7 +298,7 @@ end
       ScriptTitle.BackgroundTransparency = 1.000
       ScriptTitle.Position = UDim2.new(0, 0, 0.00953488424, 0)
       ScriptTitle.Size = UDim2.new(0, 102, 0, 20)
-      ScriptTitle.Font = Enum.Font.GothamBoldBold
+      ScriptTitle.Font = Enum.Font.GothamBold
       ScriptTitle.Text = name
       ScriptTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
       ScriptTitle.TextSize = 5.000
@@ -412,7 +412,7 @@ end
         TabText.BackgroundTransparency = 1.000
         TabText.Position = UDim2.new(1.41666663, 0, 0, 0)
         TabText.Size = UDim2.new(0, 76, 0, 24)
-        TabText.Font = Enum.Font.GothamBoldBold
+        TabText.Font = Enum.Font.GothamBold
         TabText.Text = name
         TabText.TextColor3 = Color3.fromRGB(255, 255, 255)
         TabText.TextSize = 14.000
@@ -478,7 +478,7 @@ end
       SectionText.BackgroundTransparency = 1.000
       SectionText.Position = UDim2.new(0.0887396261, 0, 0, 0)
       SectionText.Size = UDim2.new(0, 401, 0, 36)
-      SectionText.Font = Enum.Font.GothamBoldBold
+      SectionText.Font = Enum.Font.GothamBold
       SectionText.Text = name
       SectionText.TextColor3 = Color3.fromRGB(255, 255, 255)
       SectionText.TextSize = 16.000
@@ -575,7 +575,7 @@ end
             Btn.BorderSizePixel = 0
             Btn.Size = UDim2.new(0, 428, 0, 38)
             Btn.AutoButtonColor = false
-            Btn.Font = Enum.Font.GothamBoldBold
+            Btn.Font = Enum.Font.GothamBold
             Btn.Text = "   " .. text
             Btn.TextColor3 = Color3.fromRGB(255, 255, 255)
             Btn.TextSize = 16.000
@@ -609,7 +609,7 @@ end
           TextLabel.Parent = LabelModule
           TextLabel.BackgroundColor3 = zyColor
           TextLabel.Size = UDim2.new(0, 428, 0, 22)
-          TextLabel.Font = Enum.Font.GothamBoldBold
+          TextLabel.Font = Enum.Font.GothamBold
           TextLabel.Text = text
           TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
           TextLabel.TextSize = 14.000
@@ -650,7 +650,7 @@ end
             ToggleBtn.BorderSizePixel = 0
             ToggleBtn.Size = UDim2.new(0, 428, 0, 38)
             ToggleBtn.AutoButtonColor = false
-            ToggleBtn.Font = Enum.Font.GothamBoldBold
+            ToggleBtn.Font = Enum.Font.GothamBold
             ToggleBtn.Text = "   " .. text
             ToggleBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
             ToggleBtn.TextSize = 16.000
@@ -756,7 +756,7 @@ end
             KeybindBtn.BorderSizePixel = 0
             KeybindBtn.Size = UDim2.new(0, 428, 0, 38)
             KeybindBtn.AutoButtonColor = false
-            KeybindBtn.Font = Enum.Font.GothamBoldBold
+            KeybindBtn.Font = Enum.Font.GothamBold
             KeybindBtn.Text = "   " .. text
             KeybindBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
             KeybindBtn.TextSize = 16.000
@@ -773,7 +773,7 @@ end
             KeybindValue.Position = UDim2.new(0.763033211, 0, 0.289473683, 0)
             KeybindValue.Size = UDim2.new(0, 100, 0, 28)
             KeybindValue.AutoButtonColor = false
-            KeybindValue.Font = Enum.Font.GothamBold
+            KeybindValue.Font = Enum.Font.Gotham
             KeybindValue.Text = keyTxt
             KeybindValue.TextColor3 = Color3.fromRGB(255, 255, 255)
             KeybindValue.TextSize = 14.000
@@ -853,7 +853,7 @@ end
             TextboxBack.BorderSizePixel = 0
             TextboxBack.Size = UDim2.new(0, 428, 0, 38)
             TextboxBack.AutoButtonColor = false
-            TextboxBack.Font = Enum.Font.GothamBoldBold
+            TextboxBack.Font = Enum.Font.GothamBold
             TextboxBack.Text = "   " .. text
             TextboxBack.TextColor3 = Color3.fromRGB(255, 255, 255)
             TextboxBack.TextSize = 16.000
@@ -870,7 +870,7 @@ end
             BoxBG.Position = UDim2.new(0.763033211, 0, 0.289473683, 0)
             BoxBG.Size = UDim2.new(0, 100, 0, 28)
             BoxBG.AutoButtonColor = false
-            BoxBG.Font = Enum.Font.GothamBold
+            BoxBG.Font = Enum.Font.Gotham
             BoxBG.Text = ""
             BoxBG.TextColor3 = Color3.fromRGB(255, 255, 255)
             BoxBG.TextSize = 14.000
@@ -884,7 +884,7 @@ end
             TextBox.BackgroundTransparency = 1.000
             TextBox.BorderSizePixel = 0
             TextBox.Size = UDim2.new(1, 0, 1, 0)
-            TextBox.Font = Enum.Font.GothamBold
+            TextBox.Font = Enum.Font.Gotham
             TextBox.Text = default
             TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
             TextBox.TextSize = 14.000
@@ -953,7 +953,7 @@ end
             SliderBack.BorderSizePixel = 0
             SliderBack.Size = UDim2.new(0, 428, 0, 38)
             SliderBack.AutoButtonColor = false
-            SliderBack.Font = Enum.Font.GothamBoldBold
+            SliderBack.Font = Enum.Font.GothamBold
             SliderBack.Text = "   " .. text
             SliderBack.TextColor3 = Color3.fromRGB(255, 255, 255)
             SliderBack.TextSize = 16.000
@@ -992,7 +992,7 @@ end
             SliderValBG.Position = UDim2.new(0.883177578, 0, 0.131578952, 0)
             SliderValBG.Size = UDim2.new(0, 44, 0, 28)
             SliderValBG.AutoButtonColor = false
-            SliderValBG.Font = Enum.Font.GothamBold
+            SliderValBG.Font = Enum.Font.Gotham
             SliderValBG.Text = ""
             SliderValBG.TextColor3 = Color3.fromRGB(255, 255, 255)
             SliderValBG.TextSize = 14.000
@@ -1007,7 +1007,7 @@ end
             SliderValue.BackgroundTransparency = 1.000
             SliderValue.BorderSizePixel = 0
             SliderValue.Size = UDim2.new(1, 0, 1, 0)
-            SliderValue.Font = Enum.Font.GothamBold
+            SliderValue.Font = Enum.Font.Gotham
             SliderValue.Text = "1000"
             SliderValue.TextColor3 = Color3.fromRGB(255, 255, 255)
             SliderValue.TextSize = 14.000
@@ -1019,7 +1019,7 @@ end
             MinSlider.BorderSizePixel = 0
             MinSlider.Position = UDim2.new(0.296728969, 40, 0.236842096, 0)
             MinSlider.Size = UDim2.new(0, 20, 0, 20)
-            MinSlider.Font = Enum.Font.GothamBold
+            MinSlider.Font = Enum.Font.Gotham
             MinSlider.Text = "-"
             MinSlider.TextColor3 = Color3.fromRGB(255, 255, 255)
             MinSlider.TextSize = 24.000
@@ -1033,7 +1033,7 @@ end
             AddSlider.BorderSizePixel = 0
             AddSlider.Position = UDim2.new(0.810906529, 0, 0.5, 0)
             AddSlider.Size = UDim2.new(0, 20, 0, 20)
-            AddSlider.Font = Enum.Font.GothamBold
+            AddSlider.Font = Enum.Font.Gotham
             AddSlider.Text = "+"
             AddSlider.TextColor3 = Color3.fromRGB(255, 255, 255)
             AddSlider.TextSize = 24.000
@@ -1177,7 +1177,7 @@ end
             DropdownTop.BorderSizePixel = 0
             DropdownTop.Size = UDim2.new(0, 428, 0, 38)
             DropdownTop.AutoButtonColor = false
-            DropdownTop.Font = Enum.Font.GothamBoldBold
+            DropdownTop.Font = Enum.Font.GothamBold
             DropdownTop.Text = ""
             DropdownTop.TextColor3 = Color3.fromRGB(255, 255, 255)
             DropdownTop.TextSize = 16.000
@@ -1195,7 +1195,7 @@ end
             DropdownOpen.BorderSizePixel = 0
             DropdownOpen.Position = UDim2.new(0.918383181, 0, 0.5, 0)
             DropdownOpen.Size = UDim2.new(0, 20, 0, 20)
-            DropdownOpen.Font = Enum.Font.GothamBold
+            DropdownOpen.Font = Enum.Font.Gotham
             DropdownOpen.Text = "+"
             DropdownOpen.TextColor3 = Color3.fromRGB(255, 255, 255)
             DropdownOpen.TextSize = 24.000
@@ -1208,7 +1208,7 @@ end
             DropdownText.BorderSizePixel = 0
             DropdownText.Position = UDim2.new(0.0373831764, 0, 0, 0)
             DropdownText.Size = UDim2.new(0, 184, 0, 38)
-            DropdownText.Font = Enum.Font.GothamBoldBold
+            DropdownText.Font = Enum.Font.GothamBold
             DropdownText.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
             DropdownText.PlaceholderText = text
             DropdownText.Text = ""
@@ -1285,7 +1285,7 @@ end
               Option.Position = UDim2.new(0, 0, 0.328125, 0)
               Option.Size = UDim2.new(0, 428, 0, 26)
               Option.AutoButtonColor = false
-              Option.Font = Enum.Font.GothamBold
+              Option.Font = Enum.Font.Gotham
               Option.Text = option
               Option.TextColor3 = Color3.fromRGB(255, 255, 255)
               Option.TextSize = 14.000
