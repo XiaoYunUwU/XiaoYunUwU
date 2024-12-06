@@ -426,7 +426,7 @@ end
         TabBtn.BorderSizePixel = 0
         TabBtn.Size = UDim2.new(0, 110, 0, 24)
         TabBtn.AutoButtonColor = false
-        TabBtn.Font = Enum.Font.GothamBold
+        TabBtn.Font = Enum.Font.SourceSans
         TabBtn.Text = ""
         TabBtn.TextColor3 = Color3.fromRGB(0, 0, 0)
         TabBtn.TextSize = 14.000
