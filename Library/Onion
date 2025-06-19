@@ -5,7 +5,7 @@ local LocalPlayer = game:GetService("Players").LocalPlayer
 local Mouse = LocalPlayer:GetMouse()
 local HttpService = game:GetService("HttpService")
 local NotificationBindable = Instance.new("BindableFunction")
---Toggle
+--[[Toggle
 local UIGui = Instance.new("ScreenGui")
 local ToggleButton = Instance.new("TextButton")
 local UICorner = Instance.new("UICorner")
@@ -34,7 +34,7 @@ end)
 
 UICorner.Parent = ToggleButton
 UICorner.CornerRadius = UDim.new(0, 8)
-
+]]
 getgenv().OrionLoaded = true
 
 local OrionLib = {
