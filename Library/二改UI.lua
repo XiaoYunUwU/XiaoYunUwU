@@ -527,10 +527,10 @@ function Library.new(Library, name, theme)
     Open.BackgroundColor3 = Color3.fromRGB(28, 33, 55)
     Open.BackgroundTransparency = 0
     Open.Position = UDim2.new(0.00829315186, 0, 0.31107837, 0)
-    Open.Size = UDim2.new(0, 61, 0, 32)
+    Open.Size = UDim2.new(0, 70, 0, 32)
     Open.Transparency = 0.75
     Open.Font = Enum.Font.GothamBold
-    Open.Text = Language[currentLanguage].HideUI
+    Open.Text = "隐藏云脚本"
     Open.TextColor3 = Color3.fromRGB(255, 255, 255)
     Open.TextTransparency = 0
     Open.TextSize = 28.000
@@ -555,12 +555,12 @@ function Library.new(Library, name, theme)
     Open.MouseButton1Click:Connect(function()
         isAnimating = true 
         if uihide == false then
-            Open.Text = "打开UI"
+            Open.Text = "打开云脚本"
             TabMainXE.Position = UDim2.new(0.217000037, 0, 0, 3)
             uihide = true
             MainXE.Visible = false
         else
-            Open.Text = "隐藏UI"
+            Open.Text = "隐藏云脚本"
             TabMainXE.Position = UDim2.new(0.217000037, 0, 0, 3)
             MainXE.Visible = true
             uihide = false
