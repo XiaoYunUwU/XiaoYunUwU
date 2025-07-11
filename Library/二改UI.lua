@@ -1604,7 +1604,7 @@ function Library.new(Library, name, theme)
             function()
                 ToggleDropVis()
                 callback(Option.Text)
-                DropdownText.Text = text .. "｜".. Language[currentLanguage].Currently .. "" .. Option.Text
+                DropdownText.Text = text .. "｜已选择：" .. Option.Text
                 Library.flags[flag] = Option.Text
             end
         )
