@@ -1,10 +1,10 @@
     repeat
         task.wait()
     until game:IsLoaded()
-    local library = {}
+    local Library = {}
     local ToggleUI = false
-    library.currentTab = nil
-    library.flags = {}
+    Library.currentTab = nil
+    Library.flags = {}
 
 local services =
     setmetatable(
@@ -69,10 +69,10 @@ function switchTab(new)
     if switchingTabs then
         return
     end
-    local old = library.currentTab
+    local old = Library.currentTab
     if old == nil then
         new[2].Visible = true
-        library.currentTab = new
+        Library.currentTab = new
         services.TweenService:Create(new[1], TweenInfo.new(0.1), {ImageTransparency = 0}):Play()
         services.TweenService:Create(new[1].TabText, TweenInfo.new(0.1), {TextTransparency = 0}):Play()
         return
@@ -82,7 +82,7 @@ function switchTab(new)
         return
     end
     switchingTabs = true
-    library.currentTab = new
+    Library.currentTab = new
 
     services.TweenService:Create(old[1], TweenInfo.new(0.1), {ImageTransparency = 0.2}):Play()
     services.TweenService:Create(new[1], TweenInfo.new(0.1), {ImageTransparency = 0}):Play()
@@ -148,7 +148,7 @@ function drag(frame, hold)
     )
 end
 
-function library.new(library, name, theme)
+function Library.new(Library, name, theme)
     for _, v in next, services.CoreGui:GetChildren() do
         if v.Name == "zhunzhi" then
             v:Destroy()
@@ -199,22 +199,9 @@ function library.new(library, name, theme)
             dogent.Enabled = true
         end
     end
-    local Language = {
-        ["zh-cn"] = {
-            Universal = "欢迎使用云脚本",
-            OpenUI = "打开UI",
-            HideUI = "隐藏UI",
-            Currently = "当前："
-        },
     local Players = game:GetService("Players")
     local XA = Players.LocalPlayer
     local userRegion = game:GetService("LocalizationService"):GetCountryRegionForPlayerAsync(XA)
-
-    local regionToLanguage = {
-        ["CN"] = "zh-cn", 
-    }
-
-    local currentLanguage = Language[regionToLanguage[userRegion]] and regionToLanguage[userRegion] or "zh-cn"
 
     MainXE.Name = "MainXE"
     MainXE.Parent = dogent
@@ -232,7 +219,7 @@ function library.new(library, name, theme)
     WelcomeLabel.AnchorPoint = Vector2.new(0.5, 0.5)
     WelcomeLabel.Position = UDim2.new(0.5, 0, 0.5, 0)
     WelcomeLabel.Size = UDim2.new(1, 0, 1, 0)
-    WelcomeLabel.Text = Language[currentLanguage].Universal
+    WelcomeLabel.Text = "欢迎使用云脚本"
     WelcomeLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
     WelcomeLabel.TextSize = 32
     WelcomeLabel.BackgroundTransparency = 1
@@ -568,12 +555,12 @@ function library.new(library, name, theme)
     Open.MouseButton1Click:Connect(function()
         isAnimating = true 
         if uihide == false then
-            Open.Text = Language[currentLanguage].OpenUI
+            Open.Text = "打开UI"
             TabMainXE.Position = UDim2.new(0.217000037, 0, 0, 3)
             uihide = true
             MainXE.Visible = false
         else
-            Open.Text = Language[currentLanguage].HideUI
+            Open.Text = "隐藏UI"
             TabMainXE.Position = UDim2.new(0.217000037, 0, 0, 3)
             MainXE.Visible = true
             uihide = false
@@ -650,7 +637,7 @@ function library.new(library, name, theme)
             end
         )
 
-        if library.currentTab == nil then
+        if Library.currentTab == nil then
             switchTab({TabIco, Tab})
         end
 
@@ -865,7 +852,7 @@ function library.new(library, name, theme)
                 assert(text, "No text provided")
                 assert(flag, "No flag provided")
 
-                library.flags[flag] = enabled
+                Library.flags[flag] = enabled
 
                 local ToggleModule = Instance.new("Frame")
                 local ToggleBtn = Instance.new("TextButton")
@@ -922,9 +909,9 @@ function library.new(library, name, theme)
                 local funcs = {
                     SetState = function(self, state)
                         if state == nil then
-                            state = not library.flags[flag]
+                            state = not Library.flags[flag]
                         end
-                        if library.flags[flag] == state then
+                        if Library.flags[flag] == state then
                             return
                         end
                         services.TweenService:Create(
@@ -935,7 +922,7 @@ function library.new(library, name, theme)
                                 BackgroundColor3 = (state and Color3.fromRGB(255, 255, 255) or beijingColor)
                             }
                         ):Play()
-                        library.flags[flag] = state
+                        Library.flags[flag] = state
                         callback(state)
                     end,
                     Module = ToggleModule
@@ -1093,7 +1080,7 @@ function library.new(library, name, theme)
                     assert(flag, "No flag provided")
                     assert(default, "No default text provided")
 
-                    library.flags[flag] = default
+                    Library.flags[flag] = default
 
                     local TextboxModule = Instance.new("Frame")
                     local TextboxBack = Instance.new("TextButton")
@@ -1170,7 +1157,7 @@ function library.new(library, name, theme)
                 if TextBox.Text == "" then
                     TextBox.Text = default
                 end
-                library.flags[flag] = TextBox.Text
+                Library.flags[flag] = TextBox.Text
                 callback(TextBox.Text)
             end)
 
@@ -1196,7 +1183,7 @@ function library.new(library, name, theme)
                 local default = default or min
                 local precise = precise or false
 
-                library.flags[flag] = default
+                Library.flags[flag] = default
 
                 assert(text, "No text provided")
                 assert(flag, "No flag provided")
@@ -1327,7 +1314,7 @@ function library.new(library, name, theme)
                         else
                             value = value or math.floor(min + (max - min) * percent)
                         end
-                        library.flags[flag] = tonumber(value)
+                        Library.flags[flag] = tonumber(value)
                         SliderValue.Text = tostring(value)
                         SliderPart.Size = UDim2.new(percent, 0, 1, 0)
                         callback(tonumber(value))
@@ -1336,7 +1323,7 @@ function library.new(library, name, theme)
 
                 MinSlider.MouseButton1Click:Connect(
                     function()
-                        local currentValue = library.flags[flag]
+                        local currentValue = Library.flags[flag]
                         currentValue = math.clamp(currentValue - 1, min, max)
                         funcs:SetValue(currentValue)
                     end
@@ -1344,7 +1331,7 @@ function library.new(library, name, theme)
 
                 AddSlider.MouseButton1Click:Connect(
                     function()
-                        local currentValue = library.flags[flag]
+                        local currentValue = Library.flags[flag]
                         currentValue = math.clamp(currentValue + 1, min, max)
                         funcs:SetValue(currentValue)
                     end
@@ -1454,7 +1441,7 @@ function library.new(library, name, theme)
             assert(text, "No text provided")
             assert(flag, "No flag provided")
 
-            library.flags[flag] = nil
+            Library.flags[flag] = nil
 
             local DropdownModule = Instance.new("Frame")
             local DropdownTop = Instance.new("TextButton")
@@ -1515,7 +1502,7 @@ function library.new(library, name, theme)
             DropdownText.Font = Enum.Font.GothamBold
             DropdownText.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
             DropdownText.PlaceholderText = text
-            DropdownText.Text = text .. "｜" .. Language[currentLanguage].Currently
+            DropdownText.Text = text .. "｜" .. "已选择："
             DropdownText.TextColor3 = Color3.fromRGB(255, 255, 255)
             DropdownText.TextSize = 16.000
             DropdownText.TextXAlignment = Enum.TextXAlignment.Left
@@ -1618,7 +1605,7 @@ function library.new(library, name, theme)
                 ToggleDropVis()
                 callback(Option.Text)
                 DropdownText.Text = text .. "｜".. Language[currentLanguage].Currently .. "" .. Option.Text
-                library.flags[flag] = Option.Text
+                Library.flags[flag] = Option.Text
             end
         )
     end
@@ -1650,4 +1637,4 @@ function library.new(library, name, theme)
         end
         return window
     end
-return library
+return Library
