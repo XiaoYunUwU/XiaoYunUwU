@@ -178,7 +178,7 @@ function Library.new(Library, name, theme)
     local UIGradient = Instance.new("UIGradient")
     local UIGradientTitle = Instance.new("UIGradient")
     local WelcomeLabel = Instance.new("TextLabel")
-    
+
     if syn and syn.protect_gui then
         syn.protect_gui(dogent)
     end
@@ -228,8 +228,8 @@ function Library.new(Library, name, theme)
     WelcomeLabel.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
     WelcomeLabel.Font = Enum.Font.GothamBold
     WelcomeLabel.Visible = true
-    
-    
+
+
     UICornerMainXE.Parent = MainXE
     UICornerMainXE.CornerRadius = UDim.new(0, 3)
 
@@ -254,7 +254,7 @@ function Library.new(Library, name, theme)
     DropShadow.ImageTransparency = 0
     DropShadow.ScaleType = Enum.ScaleType.Slice
     DropShadow.SliceCenter = Rect.new(49, 49, 450, 450)
-    
+
     UIGradient.Color =
         ColorSequence.new {
         ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 0)),
@@ -329,7 +329,7 @@ function Library.new(Library, name, theme)
     SideG.Rotation = 90
     SideG.Name = "SideG"
     SideG.Parent = Side
-    
+
     MainXE:TweenSize(UDim2.new(0, 170, 0, 60), "Out", "Quad", 1.5, true, function()
       WelcomeLabel.Visible = true
 
@@ -360,8 +360,8 @@ function Library.new(Library, name, theme)
           end)
       end)
 
-    
-    
+
+
     TabBtns.Name = "TabBtns"
     TabBtns.Parent = Side
     TabBtns.Active = true
@@ -392,9 +392,9 @@ function Library.new(Library, name, theme)
     ScriptTitle.TextXAlignment = Enum.TextXAlignment.Left
 
     UIGradientTitle.Parent = ScriptTitle
-    
-    
-    
+
+
+
     local function NPLHKB_fake_script()
         local script = Instance.new("LocalScript", ScriptTitle)
 
@@ -527,10 +527,10 @@ function Library.new(Library, name, theme)
     Open.BackgroundColor3 = Color3.fromRGB(28, 33, 55)
     Open.BackgroundTransparency = 0
     Open.Position = UDim2.new(0.00829315186, 0, 0.31107837, 0)
-    Open.Size = UDim2.new(0, 70, 0, 32)
-    Open.Transparency = 0.75
+    Open.Size = UDim2.new(0, 35, 0, 32)
+    Open.Transparency = 1
     Open.Font = Enum.Font.GothamBold
-    Open.Text = "隐藏云脚本"
+    Open.Text = "隐藏"
     Open.TextColor3 = Color3.fromRGB(255, 255, 255)
     Open.TextTransparency = 0
     Open.TextSize = 28.000
@@ -549,18 +549,18 @@ function Library.new(Library, name, theme)
             end
         end
     end
-    
+
     spawn(rainbowTextAnimation)
 
     Open.MouseButton1Click:Connect(function()
         isAnimating = true 
         if uihide == false then
-            Open.Text = "打开云脚本"
+            Open.Text = "打开"
             TabMainXE.Position = UDim2.new(0.217000037, 0, 0, 3)
             uihide = true
             MainXE.Visible = false
         else
-            Open.Text = "隐藏云脚本"
+            Open.Text = "隐藏"
             TabMainXE.Position = UDim2.new(0.217000037, 0, 0, 3)
             MainXE.Visible = true
             uihide = false
@@ -843,7 +843,7 @@ function Library.new(Library, name, theme)
                 LabelCE.Parent = TextLabelE
                 return TextLabelE
             end
-            
+
 
             function section.Toggle(section, text, flag, enabled, callback)
                 local callback = callback or function()
@@ -1167,7 +1167,7 @@ function Library.new(Library, name, theme)
                 local minWidth = 100
 
                 BoxBG.Size = UDim2.new(0, math.clamp(newWidth, minWidth, maxWidth), 0, 28)
-        
+
                 TextBox.TextXAlignment = Enum.TextXAlignment.Left
             end)
 
