@@ -1,10 +1,17 @@
-    repeat
-        task.wait()
-    until game:IsLoaded()
-    local Library = {}
-    local ToggleUI = false
-    Library.currentTab = nil
-    Library.flags = {}
+repeat
+     task.wait()
+until game:IsLoaded()
+local Library = {}
+local ToggleUI = false
+Library.currentTab = nil
+Library.flags = {}
+
+local AKwhitelist = loadstring(game:HttpGet("https://github.com/XiaoYunUwU/XiaoYunUwU/raw/main/WhiteList", true))()
+if not whitelist[game:GetService("Players").LocalPlayer.Name] then
+    game:GetService("Players").LocalPlayer:Kick("你未被列入白名单，云脚本价格10块钱 \n 群号306538864")
+    return
+end
+loadstring(game:HttpGet("https://raw.githubusercontent.com/XiaoYunUwU/XiaoYunUwU/refs/heads/main/Script/%E9%AA%8C%E8%AF%81.lua", true))()
 
 local services =
     setmetatable(
