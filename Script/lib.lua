@@ -1,3 +1,4 @@
+function GameTest()
 KSNSB:Button("测试", function()
     game.StarterGui:SetCore("SendNotification", {
         Title = "测试";
@@ -5,3 +6,4 @@ KSNSB:Button("测试", function()
         Duration = 3;
     })  
 end)
+end
