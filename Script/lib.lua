@@ -10,5 +10,5 @@ return {
     ["感染性微笑"] = "https://raw.githubusercontent.com/XiaoYunUwU/XiaoYunUwU/refs/heads/main/Script/%E6%84%9F%E6%9F%93%E6%80%A7%E5%BE%AE%E7%AC%91",
     ["Break in (Story)"] = "https://github.com/XiaoYunUwU/XiaoYunUwU/raw/main/Script%2FBreak%20in",
     ["Field Trip Z"] = "https://github.com/XiaoYunUwU/XiaoYunUwU/raw/main/Script%2FField%20Trip%20Z",
-    ["忍者传奇"] = "https://raw.githubusercontent.com/XiaoYunUwU/XiaoYunUwU/refs/heads/main/%E5%BF%8D%E8%80%85%E4%BC%A0%E5%A5%87"
+    ["忍者传奇"] = "https://github.com/XiaoYunUwU/XiaoYunUwU/raw/main/Script%2F%E5%BF%8D%E8%80%85%E4%BC%A0%E5%A5%87"
 }
