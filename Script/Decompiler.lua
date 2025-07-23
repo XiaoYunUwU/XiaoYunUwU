@@ -281,4 +281,15 @@ function Decompiler.decompileFunction(chunk, indent, funcName)
   return lines
 end
 
+function Decompiler.start(scriptChunk)
+    if not scriptChunk or type(scriptChunk) ~= "table" then
+        warn("Decompiler.start: Null")
+        return
+    end
+
+    local lines = Decompiler.decompileFunction(scriptChunk, 0, "Main")
+    print("[Decompiler 输出]")
+    print(table.concat(lines, "\n"))
+end
+
 return Decompiler
