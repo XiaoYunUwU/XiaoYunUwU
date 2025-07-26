@@ -11,5 +11,6 @@ return {
     ["Break in (Story)"] = "https://github.com/XiaoYunUwU/XiaoYunUwU/raw/main/Script%2FBreak%20in",
     ["Field Trip Z"] = "https://github.com/XiaoYunUwU/XiaoYunUwU/raw/main/Script%2FField%20Trip%20Z",
     ["极速传奇"] = "https://github.com/XiaoYunUwU/XiaoYunUwU/raw/main/Script%2F%E6%9E%81%E9%80%9F%E4%BC%A0%E5%A5%87",
+    ["战争大亨"] = "https://raw.githubusercontent.com/XiaoYunUwU/XiaoYunUwU/refs/heads/main/Script/%E6%88%98%E4%BA%89%E5%A4%A7%E4%BA%A8",
     ["忍者传奇"] = "https://github.com/XiaoYunUwU/XiaoYunUwU/raw/main/Script%2F%E5%BF%8D%E8%80%85%E4%BC%A0%E5%A5%87"
 }
