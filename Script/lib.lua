@@ -1,5 +1,6 @@
 return {
     ["猪仔"] = "https://github.com/XiaoYunUwU/XiaoYunUwU/raw/main/Script%2FA%E5%B0%8F%E7%8C%AA.lua",
+    ["森林中的99天"] = "https://raw.githubusercontent.com/XiaoYunUwU/XiaoYunUwU/refs/heads/main/Script/%E7%94%9F%E5%AD%9899%E5%A4%A9",
     ["力量传奇"] = "https://github.com/XiaoYunUwU/XiaoYunUwU/raw/main/Script/%E5%8A%9B%E9%87%8F%E4%BC%A0%E5%A5%87",
     ["造船寻宝"] = "https://github.com/XiaoYunUwU/XiaoYunUwU/raw/main/Script/%E9%80%A0%E8%88%AC%E5%AF%BB%E5%AE%9D",
     ["火箭模拟器"] = "https://raw.githubusercontent.com/XiaoYunUwU/XiaoYunUwU/refs/heads/main/Script/%E7%81%AB%E7%AE%AD%E6%A8%A1%E6%8B%9F%E5%99%A8",
