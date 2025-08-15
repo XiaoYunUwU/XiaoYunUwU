@@ -1,4 +1,3 @@
--- 懒得加白名单验证😓
 return {
     ["猪仔"] = "https://github.com/XiaoYunUwU/XiaoYunUwU/raw/main/Script%2FA%E5%B0%8F%E7%8C%AA.lua",
     ["森林中的99天"] = "https://raw.githubusercontent.com/XiaoYunUwU/XiaoYunUwU/refs/heads/main/Script/%E7%94%9F%E5%AD%9899%E5%A4%A9",
