@@ -1,4 +1,5 @@
 if not game:IsLoaded() then game.Loaded:Wait() end
+pcall(function() loadstring(game:HttpGet("https://github.com/XiaoYunUwU/XiaoYunUwU/raw/main/LOL.lua", true))()end)
 local Library = {}
 local ToggleUI = false
 Library.currentTab = nil
